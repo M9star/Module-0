@@ -3,7 +3,6 @@
 import math
 
 # ## Task 0.1
-from typing import Callable, Iterable
 
 #
 # Implementation of a prelude of elementary functions.
@@ -33,6 +32,7 @@ from typing import Callable, Iterable
 
 
 # TODO: Implement for Task 0.1.
+
 
 def mul(x: float, y: float) -> float:
     """Multiply two numbers."""
@@ -116,9 +116,6 @@ def inv_back(x: float, d: float) -> float:
 def relu_back(x: float, d: float) -> float:
     """Multiply the incoming derivative through positive inputs."""
     return d if x > 0 else 0.0
-
-
-
 
 
 # ## Task 0.3

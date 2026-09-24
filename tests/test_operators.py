@@ -108,12 +108,10 @@ def test_sigmoid(a: float) -> None:
     * It is  strictly increasing.
     """
     # TODO: Implement for Task 0.2.
-    assert 0.0 < sigmoid (a) < 1.0 
+    assert 0.0 < sigmoid(a) < 1.0
     assert_close(1.0 - sigmoid(a), sigmoid(neg(a)))
-    assert sigmoid(0.0) == 0.5 
-    assert sigmoid(a) < sigmoid(a + 1.0 )
-
-   
+    assert sigmoid(0.0) == 0.5
+    assert sigmoid(a) < sigmoid(a + 1.0)
 
 
 @pytest.mark.task0_2
@@ -121,11 +119,9 @@ def test_sigmoid(a: float) -> None:
 def test_transitive(a: float, b: float, c: float) -> None:
     """Test the transitive property of less-than (a < b and b < c implies a < c)"""
     # TODO: Implement for Task 0.2.
-    a, b , c = sorted((a, b , c))
+    a, b, c = sorted((a, b, c))
     if lt(a, b) and lt(b, c):
-        assert lt(a,c) == 1.0 
-
-
+        assert lt(a, c) == 1.0
 
 
 @pytest.mark.task0_2
@@ -152,7 +148,6 @@ def test_other(a: float) -> None:
     """Write a test that ensures some other property holds for your functions."""
     assert neg(neg(a)) == a
     assert add(a, neg(a)) == 0.0
-
 
 
 # ## Task 0.3  - Higher-order functions
